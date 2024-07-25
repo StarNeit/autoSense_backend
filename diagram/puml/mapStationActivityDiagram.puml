@@ -1,0 +1,20 @@
+@startuml MAP ALL FUEL STATION
+
+header MAP FUEL STATION
+
+|User|
+start
+:user open map fuel station;
+|Server|
+:Retrieve all fuel station details;
+if (Is fuel station found?) then (no)
+  |User|
+  :show error message;
+  stop
+else (yes)
+  |User|
+  :show fuel station details;
+endif
+stop
+
+@enduml

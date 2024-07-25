@@ -1,0 +1,11 @@
+@startuml
+actor User
+left to right direction
+rectangle "Fuel Station System" {
+    User -- (Add New Station)
+    User -- (View Details of a Station)
+    User -- (View Map of Fuel Stations)
+    User -- (Update Fuel Station)
+    User -- (Delete a Station)
+}
+@enduml

@@ -1,0 +1,22 @@
+@startuml VIEW STATION
+
+header VIEW STATION
+
+|User|
+start
+:User clicks view station button;
+:User selects station;
+|Server|
+:Retrieve station details;
+if (Is station found?) then (no)
+  |User|
+  :show error message;
+  stop
+else (yes)
+  |User|
+  :show station details;
+endif
+
+stop
+
+@enduml

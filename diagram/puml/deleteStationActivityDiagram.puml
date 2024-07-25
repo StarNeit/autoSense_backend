@@ -1,0 +1,26 @@
+@startuml DELETE STATION
+
+header DELETE STATION
+
+|User|
+start
+:User clicks delete station button;
+:User selects station;
+|Server|
+:Retrieve station details;
+if (Is station found?) then (no)
+  |User|
+  :show error message;
+  stop
+else (yes)
+  |User|
+  :show confirmation message;
+  :User confirms deletion;
+  |Server|
+  :Delete station from database;
+  |User|
+  :show success message;
+endif
+stop
+
+@enduml

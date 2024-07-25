@@ -1,0 +1,19 @@
+@startuml
+skinparam defaultTextAlignment center
+skinparam rectangle {
+    Rounded true
+    BorderColor black
+    Shadowing false
+}
+
+title Architectural Diagram for Fuel Station Management System
+
+rectangle "Mobile App\n(Flutter)" as mobile_app #FFAAAA
+rectangle "Backend\n(Express.js + TypeScript)" as backend #AAFFAA
+rectangle "Database\n(MongoDB)" as database #AAFFAA
+rectangle "Deployment\n(AWS with Docker)" as deployment #FFFFAA
+
+mobile_app -right-> backend : API Requests
+backend -down-> database : Database Queries
+database -down-> deployment : Deployment
+@enduml
